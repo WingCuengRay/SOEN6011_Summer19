@@ -19,16 +19,30 @@
 \subsection{Characteristics}
 
 \begin{enumerate}
-    \item $arccos(x)$ is an inverse trigonometric functions of $cos(x)$.
-    \item principle values
-    \item relationship with $cos(x)$
-    \item 
+    \item $arccos(x)$ is an inverse trigonometric functions of $cos(x)$. In order introduce inverse trigonometric functions, we first need to take a look at trigonometric functions. In mathematics, the trigonometric functions are real functions which relate an angle of a right-angled triangle to ratios of two side lengths\cite{einstein}. $cos(x)$ is one of them. Given $$x = cos(y) = \frac{b}{h} = \frac{adjacent}{hypotenuse}$$ then $$y = arccos(x)$$ Figure 1 is an example of $cos(x)$. In this case, $x = cos(y) = \frac{OC}{OA}$. Therefore, $y = arccos(x) = arccos(\frac{OC}{OA})$.
+    \begin{center}
+      \begin{figure}[h!]
+          \centering
+          \includegraphics[width=0.3\linewidth]{image/cos_detail.jpg}
+          \caption{trigonometric functions}
+          \label{fig:my_label}
+      \end{figure}
+    \end{center}
     
-    \item $arccos(x)$ is a trigonometric function (relate an angle of a right-angled triangle to ratios of two side lengths).
-    \item 
+    % \item principle values
+    % \item relationship with $cos(x)$
+    % \item $arccos(x)$ is a trigonometric function (relate an angle of a right-angled triangle to ratios of two side lengths).
+    % \item 
 \end{enumerate}
 
-\begin{figure}[h!]
+\subsection{Domain and Co-domain}
+\paragraph{}
+Since none of the six trigonometric functions are one-to-one, they are restricted in order to have inverse functions. As a result, we make a restriction here to restrict the co-domain of $arccos(x)$ in area $[0, \pi]$. Therefore, there will be one-to-one relationship between its domain and co-domain.
+
+\paragraph{}
+As a result, the domain is $x \in [-1, 1]$. The co-domain is $y \in [0, \pi]$ for the equation $y = arccos(x)$.
+
+\begin{figure}
   \centering
   \begin{subfigure}[b]{0.4\linewidth}
     \includegraphics[width=\linewidth]{image/arccos.png}
@@ -41,12 +55,6 @@
   \caption{$arccos(x)$ and $cos(x)$}
   \label{fig:coffee}
 \end{figure}
-
-\subsection{Domain and Co-domain}
-Assumption: ? \newline
-For the equation $y = arccos(x)$, the domain is $x \in [-1, 1]$. 
-The co-domain is $y \in [0, \pi]$
-
 
 
 \section{Requirements}
