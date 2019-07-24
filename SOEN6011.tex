@@ -20,7 +20,7 @@
 \setlength{\topskip}{0mm}
 \setlength{\droptitle}{-8em} 
 \title{{\large \textbf{CONCORDIA UNIVERSITY \\ DEPARTMENT OF COMPUTER SCIENCE AND SOFTWARE ENGINEERING \\ SOEN 6011: SOFTWARE ENGINEERING PROCESSES \\ SECTION CC WINTER 2019 \\ F1: $arccos(x)$}  \\ }}
-\author{\normalsize \textbf {STUDENT NAME: YONGCONG LEI} \\ \normalsize \textbf{STUDENT IDENTIFICATION NUMBER: 40045701 }}
+\author{\normalsize \textbf {STUDENT NAME: YONGCONG LEI} \\ \normalsize \textbf{STUDENT IDENTIFICATION NUMBER: 40045701} \\ \normalsize \textbf{GITHUB REPOSITORY: https://github.com/WingCuengRay/SOEN6011\_Summer19}}
 \date{}
 \begin{document}
 \maketitle
@@ -107,6 +107,60 @@ As a result, the domain is $x \in [-1, 1]$. The co-domain is $y \in [-\frac{1}{2
     \end{algorithmic}
 \end{enumerate}
 
+\pagebreak
+\section{Problem 4}
+\subsection{Debugger}
+\subsubsection{Description}
+\paragraph{}
+I choose the debugger tools in IntelliJ IDEA as the debugger of my application. It provides a full range of facilities of debugging in source code, including but no limitting: 
+\begin{enumerate}
+    \item Breakpoints in Java.
+    \item Customizable breakpoint properties: conditions, pass count, and so on.
+    \item Frames, variables, and watches views in the debugger UI.
+    \item Runtime evaluation of expressions.
+\end{enumerate}
+
+\subsubsection{Advantage}
+\paragraph{}
+There are lots of \textbf{advantages} with the debugging tool set in IntelliJ IDEA. 
+
+\begin{enumerate}
+    \item It provides a simple but powerful user interface for debugging. User can easy create various kinds of breakpoints, such as conditional breakpoints,  temporary breakpoints,  temporary disabled breakpoints and so on.
+    \item It provides the functionality of inline values view.  It lets you view the values of variables used in your source code right next to their usage
+    \item It provides the functionality of hot swapping which allows user to insert minor changes in your code without shutting down the process.
+    \item It provides the functionality of remote debugging. Remote debug means attaching debugger to a process which is already running on a specific port on your or any other’s host. This way you can attach the debugger to your application server which is running standalone.
+\end{enumerate}
+
+\subsubsection{Disadvantage}
+The biggest \textbf{disadvantages} of IntelliJ debugger is because of it's native in IntelliJ IDEA, which it can't be ran as an standalone debugger without IntelliJ IDEA. As a result, you must install the IDE to debug the application and the IDEA is kind of heavy.
+
+
+\pagebreak
+\subsection{Checkstyle}
+
+\subsubsection{Description}
+\paragraph{}
+I choose Checkstyle wtih Google Java Style as the tool to check the quality of your source code. Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard. It automates the process of checking Java code to spare humans of this boring (but important) task. This makes it ideal for projects that want to enforce a coding standard.Checkstyle is highly configurable and can be made to support almost any coding standard. Google Java Style is only of the standard.
+
+\subsubsection{Advantage}
+\begin{enumerate}
+    \item It makes your source control diffs show just actual code changes, and all but eliminates "diff noise" due to whiltespaces and other insignificant formatting choices
+    \item It makes all code more similar, so that developers are more comfortable pairing and sharing the code bases.
+    \item It greatly helps to uniform the code in the company, and thanks to that you generally produce a more easily understandable and way more easily maintainable structure for products.
+\end{enumerate}
+
+\subsubsection{Disadvantage}
+I would say there is hardly an disadvantage of Checksyle. The only possible disadvantages is the lack of a human eye after the formatting, to add some exceptions, etc. 
+
+\subsection{Effort made to achieving attributes}
+\begin{itemize}
+    \item correctness and robust - I wrote test case with JUnit to ensure there is no bug in each method of my applicaiton and reached a test report with high-coverage .
+    \item efficiency - I did some research about the implementation of my function and made a comparison between mutiple implementation. Then I chose the one with lowest time complexity.
+    \item usability - I provided textual user interface for my calculator so that users can user it easily.
+    \item maintainable - I added comments and documentation in the code, such as Javadoc.
+\end{itemize}
+
+\pagebreak
 \begin{thebibliography}{9}
 \bibitem{A comparison of rates of rational and polynomial approximation} 
 E. P. Dolzhenko
