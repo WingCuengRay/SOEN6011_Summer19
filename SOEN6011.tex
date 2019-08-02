@@ -7,6 +7,7 @@
 \usepackage{titling}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{pdfpages}
 
 
 \usepackage[noend]{algorithmic}
@@ -19,7 +20,7 @@
 
 \setlength{\topskip}{0mm}
 \setlength{\droptitle}{-8em} 
-\title{{\large \textbf{CONCORDIA UNIVERSITY \\ DEPARTMENT OF COMPUTER SCIENCE AND SOFTWARE ENGINEERING \\ SOEN 6011: SOFTWARE ENGINEERING PROCESSES \\ SECTION CC WINTER 2019 \\ F1: $arccos(x)$}  \\ }}
+\title{{\large \textbf{CONCORDIA UNIVERSITY \\ DEPARTMENT OF COMPUTER SCIENCE AND SOFTWARE ENGINEERING \\ SOEN 6011: SOFTWARE ENGINEERING PROCESSES \\ SECTION CC WINTER 2019 \\ F1: $arccos(x)$}  \\ Changes from $D_2$ to $D_3$: Section 5 \& 6 }}
 \author{\normalsize \textbf {STUDENT NAME: YONGCONG LEI} \\ \normalsize \textbf{STUDENT IDENTIFICATION NUMBER: 40045701} \\ \normalsize \textbf{GITHUB REPOSITORY: https://github.com/WingCuengRay/SOEN6011\_Summer19}}
 \date{}
 \begin{document}
@@ -144,7 +145,7 @@ I choose Checkstyle wtih Google Java Style as the tool to check the quality of y
 
 \subsubsection{Advantage}
 \begin{enumerate}
-    \item It makes your source control diffs show just actual code changes, and all but eliminates "diff noise" due to whiltespaces and other insignificant formatting choices
+    \item It makes your source control diffs show just actual code changes, and all but eliminates "diff noise" due to whitespaces and other insignificant formatting choices
     \item It makes all code more similar, so that developers are more comfortable pairing and sharing the code bases.
     \item It greatly helps to uniform the code in the company, and thanks to that you generally produce a more easily understandable and way more easily maintainable structure for products.
 \end{enumerate}
@@ -159,6 +160,94 @@ I would say there is hardly an disadvantage of Checksyle. The only possible disa
     \item usability - I provided textual user interface for my calculator so that users can user it easily.
     \item maintainable - I added comments and documentation in the code, such as Javadoc.
 \end{itemize}
+
+
+\pagebreak
+\section{Problem 5 - Source Code Review}
+The function which I review is F2 $tan(x)$ by Qing Li. I choose the native review tool in GitHub to generate the source code review report automatically. It's available when you make a pull request. The reviewer can make comments on the code and either approve or reject the pull request.
+
+\subsection{Code Review Practices}
+\begin{itemize}
+    \item check if application can run successfully 
+    \item check the correctness and accuracy of her function
+    \item check if formatting is consistent with Google CheckStyle
+    \item check if unnecessary white-space / unused import don't exist in source code
+    \item check if variables are named properly
+    \item check if no magic numbers or hard-coded Strings are used .(Constants or Enums should be used instead)
+    \item check if code is well-documented
+\end{itemize}
+
+\subsection{Code Review Result}
+Qing's source code is clean and well-documented. Each method is documented in Javadoc style. There is no error in the code and the application can be ran successfully. In spite of these, some small improvements in my opinion. The report below will show the details of them.
+
+\begin{table}[h!]
+\begin{tabular}{|l|l|}
+\hline
+Review Practices                                                    & Status(Pass/Fail) \\ \hline
+application can run                                                & Pass              \\ \hline
+the correctness and accuracy of her function                       & Pass              \\ \hline
+formatting is consistent with Google CheckStyle                    & Pass              \\ \hline
+unnecessary white-space / unused import don't exist in source code & Pass              \\ \hline
+variables are named properly                                       & Pass              \\ \hline
+no magic numbers or hard-coded Strings are used                    & Pass              \\ \hline
+code is well-documented                                            & Pass              \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Checkstyle report}
+Qing maintained a good style of code based on Google CheckStyle. There is only one on warning in her source files.
+
+\begin{verbatim}
+file: TangentFunction.java
+Warning: '\}' at column 29 should be alone on a line. (13:29) [RightCurly]
+\end{verbatim}
+
+\subsection{Code Review Report}
+\includepdf[pages=-]{./review_report.pdf}
+
+\section{Problem 6 - Test Case Report}
+The test case I need to review is F3: $sinh(x)$ by Xueying Li. Here is the testing environment on which I ran the tests. I ran the tests with test suit in IntelliJ IDEA which support various kind of funtionalitiy, including debugging, test report generation, etc. 
+\begin{itemize}
+    \item Operating System: Windows 10 OS
+    \item Memory: 8G
+    \item Disk: 256G SSD
+    \item JDK version: Oracle JDK 1.8.0\_161
+    \item IDE: IntelliJ IDEA 2018.02.05 (ULtimate Edition)
+\end{itemize} 
+
+
+There are three classes in her source code and one test class in test test. Here is the test coverage.
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+Class &	Class,\% & Method,\% & Line,\% \\
+\hline
+CalculatorController & 100\% (1/ 1) & 90.9\% (10/ 11) & 65.3\% (111/ 170) \\
+CalculatorModel & 100\% (1/ 1) & 80\% (4/ 5) & 85.7\% (6/ 7) \\
+CalculatorView & 100\% (1/ 1) & 50\% (2/ 4) & 6.2\% (2/ 32) \\
+\hline
+\end{tabular}
+\end{center}
+
+Here is the detail of each test case and the related requirement.
+\begin{center}
+ \begin{tabular}{||c c c c c||} 
+ \hline
+Test Case ID & Description &	Module Name & Requirement ID & Test Result \\
+\hline
+TFR1 & Testing executation application & CalculatorController & FR1 & Passed \\
+TFR2 & Testing user input  & CalculatorController & FR2 & Passed \\
+TFR3 & Testing result output & CalculatorController & FR3 & Passed \\
+TFR4 & Testing input validating & CalculatorController & FR4 & Passed \\
+TQR1 & Testing accuracy & ALL & QR1 & Passed \\
+TQR2 & Testing testability & CalculatorController & QR2 & Passed \\
+TQR3 & Testing system reliability & CalculatorController & QR3 & Passed \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
 
 \pagebreak
 \begin{thebibliography}{9}
